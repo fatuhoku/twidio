@@ -23,4 +23,4 @@ Template.buttons.events
   'click button#toggle': ->
     Session.set 'track', track2
   'click button#clear': ->
-    alert('clear cliked.')
+    Playlist.remove({})
