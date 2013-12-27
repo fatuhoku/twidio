@@ -29,3 +29,6 @@ accounts-ui-bootstrap-dropdown
 /headers
 /simple-schema
 /observatory-apollo
+/moment
+/observatory-galileo
+/twilio-meteor

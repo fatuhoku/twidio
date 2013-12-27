@@ -12,6 +12,8 @@
     "profile-online": {},
     "moment-alternative": {},
     "bootstrap-themes": {},
-    "headers": {}
+    "headers": {},
+    "moment": {},
+    "twilio-meteor": {}
   }
 }

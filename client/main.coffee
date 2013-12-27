@@ -1,14 +1,5 @@
 Playlist = @Playlist
 
-@track1 =
-  name: "Get Lucky"
-  uri: "https://embed.spotify.com/?uri=spotify:track:2Foc5Q5nqNiosCNqttzHof"
-  timestamp: "1"
-
-@track2 =
-  name: "Elevation of Love"
-  uri: "https://embed.spotify.com/?uri=spotify:track:6nJW8I0uhwDyNIPkIhXvPk"
-  timestamp: "2"
 
 
 Session.set 'track', track1
@@ -26,3 +17,5 @@ Template.buttons.events
     Meteor.call 'clearPlaylist'
   'click button#search': ->
     # Switch over to the server side, I think.
+  'click button#sendSms': ->
+    Meteor.call 'sendSms'
