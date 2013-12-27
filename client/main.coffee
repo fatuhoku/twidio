@@ -23,4 +23,6 @@ Template.buttons.events
   'click button#toggle': ->
     Session.set 'track', track2
   'click button#clear': ->
-    Playlist.remove({})
+    Meteor.call 'clearPlaylist'
+  'click button#search': ->
+    # Switch over to the server side, I think.
