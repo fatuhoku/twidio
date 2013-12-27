@@ -1,3 +1,15 @@
 <template name="home">
-	<h1>Send a text to XXXXXX to enqueue a new song.</h1>
+	<!-- <h1>Send a text to XXXXXX to enqueue a new song.</h1> -->
+
+    <h1>Hello ,{{> hello}}</h1>
+    <p>~ my first app ~</p>
+    {{> form}}
+</template>
+
+<template name="hello">
+    {{somebody}}
+</template>
+
+<template name="form">
+    <input id='newName' type='text'/><input type='submit' value='Greet!'/>
 </template>
