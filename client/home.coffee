@@ -1,7 +1,7 @@
 Session.set( 'somebody' , 'World' );
 
 Template.hello.somebody = ->
-  Session.get('somebody')
+  Session.get 'somebody'
 
 Template.form.events
   'click input[type=submit]': ->
