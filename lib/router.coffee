@@ -17,6 +17,12 @@ Router.configure
 
 Router.map ->
   @route 'home', path: '/'
-  @route 'admin'
+  @route 'admin',
+  @route 'enqueue',
+    where: 'server',
+    action: ->
+      console.log "Received request with params: "+ this.params
+      @response.writeHead(200, {'Content-Type': 'text/html'})
+      @response.end "Hello from the server."
 
 
