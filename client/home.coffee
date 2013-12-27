@@ -1,8 +1,18 @@
-Session.set( 'somebody' , 'World' );
+@track1 =
+  name: "Get Lucky"
+  artist: "Daft Punk"
+  uri: "https://embed.spotify.com/?uri=spotify:track:2Foc5Q5nqNiosCNqttzHof"
 
-Template.hello.somebody = ->
-  Session.get 'somebody'
+@track2 =
+  name: "Elevation of Love"
+  artist: "ESB"
+  uri: "https://embed.spotify.com/?uri=spotify:track:6nJW8I0uhwDyNIPkIhXvPk"
 
-Template.form.events
+Session.set 'track', track1
+
+Template.home.track = ->
+  Session.get 'track'
+
+Template.toggle_button.events
   'click input[type=submit]': ->
-    Session.set 'somebody' , $('#newName').val()
+    Session.set 'track', track2
