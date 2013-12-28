@@ -17,8 +17,11 @@ Meteor.methods
       body: "Heya from Twidio!"
     )
   handleTwilioRequest: (response, params) ->
-    console.log "Handling Twilio request with params..." + params
+    console.log "Handling Twilio request with params..."
+    console.log params
+    searchTerm = params.Body
     json =
-      Message: "Received music request."
+      Message:
+        Body: "Received music request for your search " + searchTerm
     response.writeHead(200, {'Content-Type': 'text/xml'})
     response.end(easyXML.render json)
